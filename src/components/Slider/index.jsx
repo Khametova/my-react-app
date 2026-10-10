@@ -1,7 +1,12 @@
-import React from "react";
-import defaultImage from "./defaultSpaceImage.jpg";
-function Slider() {
-  return <div>Slider</div>;
+import { Component } from "react";
+import defaultSpaceImage from "../image/defaultSpaceImage.jpg";
+
+function Slider({ slide: { title, description, src } }) {
+  return (
+    <div>
+      <Slider />
+    </div>
+  );
 }
 
 export default Slider;
