@@ -1,4 +1,5 @@
-import { Component, useState } from "react";
+import { Component } from "react";
+import styles from "./Slider.module.css";
 import defaultSpaceImage from "../image/defaultSpaceImage.jpg";
 
 /*function Slider({ slides }) {
@@ -45,11 +46,14 @@ class Slider extends Component {
     const { currentIndex } = this.state;
 
     return (
-      <div>
+      <div className={styles.slideContainer}>
         <img
+          className={styles.slideImage}
           src={slides[currentIndex].src ?? defaultSpaceImage}
           alt={slides[currentIndex].title}
         />
+        <h2>{slides[currentIndex].title}</h2>
+        <p>{slides[currentIndex].description}</p>
 
         <button onClick={this.handleNext}>{"NEXT"}</button>
         <button onClick={this.handleBack}>{"BACK"}</button>
